@@ -1,5 +1,5 @@
 %nav.navbar.navbar-light.bg-light
-  %a.navbar-brand{:href => "/"} Our Logo
+  %a.navbar-brand{:href => "/"} Trip
   - if user_signed_in?
     %form.form-inline
       = link_to 'Sign out', destroy_user_session_path,
