@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -64,10 +66,17 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
+gem 'jquery-rails'
+gem 'sprockets-rails', '>= 2.3.2'
+gem 'devise'
 gem 'simple_form', '~> 4.1'
 gem 'bootstrap', '~> 4.3', '>= 4.3.1'
 gem 'decent_exposure', '~> 3.0', '>= 3.0.2' # Way to encapsulate shared emthods in controller
 gem 'haml-rails', '~> 2.0'
 gem 'nokogiri' # Nokogiri (鋸) is an HTML, XML, SAX, and Reader parser. Among Nokogiri's many features is the ability to search documents via XPath or CSS3 selectors.
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
+
+gem 'countries', require: 'countries/global'
+gem 'cities'
+gem 'country_select', require: 'country_select_without_sort_alphabetical'

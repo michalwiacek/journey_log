@@ -1,0 +1,1 @@
+Cities.data_path = 'data/cities'

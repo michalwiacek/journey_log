@@ -1,0 +1,15 @@
+-# frozen_string_literal: true
+= simple_form_for(:trip) do |f|
+  .form-inputs
+    = f.input :title
+    = f.input :description
+    = f.input :country
+    = f.input :city
+    = f.input :start_date
+    = f.input :end_date
+    
+  = f.error_notification
+
+  
+  .form-actions
+    = f.button :submit
