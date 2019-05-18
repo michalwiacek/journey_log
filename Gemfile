@@ -80,3 +80,6 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'countries', require: 'countries/global'
 gem 'cities'
 gem 'country_select', require: 'country_select_without_sort_alphabetical'
+
+gem 'forecast_io'
+gem 'geocoder'

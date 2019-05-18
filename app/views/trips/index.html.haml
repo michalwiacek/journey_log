@@ -1,23 +1,22 @@
-%h1 Listing trips
-
-%table
-  %thead
-    %tr
-      %th
-      %th
-      %th
-      %th
-      %th
-
-  %tbody
-    - trips.each do |trip|
-      %tr
-        %td= trip.city
-        %td= trip.description
-        %td= link_to 'Show', trip
-        %td= link_to 'Edit', edit_trip_path(trip)
-        %td= link_to 'Destroy', trip, method: :delete, data: { confirm: 'Are you sure?' }
-
-%br
-
+%h3 Listing trips
 = link_to 'New Trip', new_trip_path
+%br
+.row
+  .col-sm
+    %table.table
+      %thead
+        %tr
+          %th location
+          %th description
+          %th
+          %th
+          %th
+
+      %tbody
+        - trips.each do |trip|
+          %tr
+            %td= trip.city
+            %td= trip.description
+            %td= link_to 'Show', trip
+            %td= link_to 'Edit', edit_trip_path(trip)
+            %td= link_to 'Destroy', trip, method: :delete, data: { confirm: 'Are you sure?' }

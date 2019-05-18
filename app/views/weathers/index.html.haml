@@ -1,0 +1,10 @@
+%h3 Here you can check the weather
+.row
+  .col-sm
+    = simple_form_for @weather, url: weathers_path, remote: true do |f|
+      = f.input :location
+      = f.input :date
+      = f.submit "check", class: "btn-primary"
+
+  .col-sm
+    = render partial: 'item_grid', locals: { items: @forecast }

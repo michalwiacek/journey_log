@@ -1,5 +1,8 @@
 %nav.navbar.navbar-light.bg-light
-  %a.navbar-brand{:href => "/"} Trip
+  %a.navbar-brand{:href => "/"} TripLog
+  %form.form-inline
+    = link_to 'My trips', trips_path, class: "btn"
+    = link_to 'Check weather', weathers_path, class: "btn"
   - if user_signed_in?
     %form.form-inline
       = link_to 'Sign out', destroy_user_session_path,
