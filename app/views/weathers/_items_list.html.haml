@@ -1,0 +1,11 @@
+.card.item-box
+  - if items
+    .card-header
+      = items['summary']
+    %ul.list-group.list-group-flush
+      %li.list-group-item
+        = "Humidity: #{number_to_percentage(100*items['humidity'], precision: 0)}"
+      %li.list-group-item
+        = "Max temp: #{items['temperatureMax'].round}°"
+      %li.list-group-item
+        = "Min temp: #{items['temperatureMin'].round}°"
